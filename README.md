@@ -71,3 +71,6 @@ export default defineConfig([
   },
 ])
 ```
+
+//字型下載
+https://fonts.google.com/selection
