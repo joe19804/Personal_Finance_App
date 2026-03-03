@@ -1,7 +1,6 @@
-import type { ElementType } from "react";
 
 interface NavItemProps {
-  icon: ElementType;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
   label: string;
   active: boolean;
   onClick: () => void;

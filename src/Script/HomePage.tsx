@@ -1,5 +1,10 @@
-import { ArrowUpDown, ChevronsLeft, DollarSign, Home, PieChart, ReceiptText } from "lucide-react";
+import { ChevronsLeft } from "lucide-react";
 import { useState } from "react";
+import BudgetsIcon from "../assets/images/icon-nav-budgets.svg?react";
+import OverviewIcon from "../assets/images/icon-nav-overview.svg?react";
+import PotsIcon from "../assets/images/icon-nav-pots.svg?react";
+import RecurringBillsIcon from "../assets/images/icon-nav-recurring-bills.svg?react";
+import TransactionIcon from "../assets/images/icon-nav-transaction.svg?react";
 import NavItem from "../Components/NavItem";
 import BudgetsPage from "./BudgetsPage";
 import OverviewPage from "./OverviewPage";
@@ -7,14 +12,15 @@ import PotsPage from "./PotsPage";
 import RecurringBillsPage from "./RecurringBillsPage";
 import TransactionPage from "./TransactionPage";
 
+
 export default function HomePage() {
   const [active, setActive] = useState<number>(0);
-  const tabContent: { id: string, label: string, icon: React.ElementType, content: React.ReactNode; }[] = [
-    { id: 'Overview', label: 'Overview', icon: Home, content: <OverviewPage /> },
-    { id: 'Transaction', label: 'Transaction', icon: ArrowUpDown, content: <TransactionPage /> },
-    { id: 'Budgets', label: 'Budgets', icon: PieChart, content: <BudgetsPage /> },
-    { id: 'Pots', label: 'Pots', icon: DollarSign, content: <PotsPage /> },
-    { id: 'RecurringBills', label: 'Recurring Bills', icon: ReceiptText, content: <RecurringBillsPage /> }];
+  const tabContent: { id: string, label: string, icon: React.FC<React.SVGProps<SVGSVGElement>>, content: React.ReactNode; }[] = [
+    { id: 'Overview', label: 'Overview', icon: OverviewIcon, content: <OverviewPage /> },
+    { id: 'Transaction', label: 'Transaction', icon: TransactionIcon, content: <TransactionPage /> },
+    { id: 'Budgets', label: 'Budgets', icon: BudgetsIcon, content: <BudgetsPage /> },
+    { id: 'Pots', label: 'Pots', icon: PotsIcon, content: <PotsPage /> },
+    { id: 'RecurringBills', label: 'Recurring Bills', icon: RecurringBillsIcon, content: <RecurringBillsPage /> }];
 
   function onClickActive(v: number) {
     setActive(v);

@@ -8,5 +8,10 @@ export default defineConfig({
     tailwindcss(),
     svgr(),
   ],
+  resolve: {
+    alias: {
+      '@': '/src',          // 確認你的 @ 指向 src
+    },
+  },
 
 });
