@@ -1,4 +1,4 @@
-export default function TransactionItem({ name, date, amount, isPositive, color }) {
+export default function TransactionItem({ name, date, amount, isPositive, color }: { name: string, date: string, amount: string, isPositive: boolean, color: string; }) {
   return (
     <div className="flex justify-between items-center py-1">
       <div className="flex items-center gap-4">

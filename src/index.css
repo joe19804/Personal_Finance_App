@@ -1,1 +1,18 @@
 @import "tailwindcss"
+
+/* @theme {
+  --color-bg-app: #f8f4f0;
+  --color-card-bg: #ffffff;
+  --color-cat-entertainment: #277c78;
+  --color-cat-bills: #82c9d7;
+  --color-cat-dining: #f2cdac;
+  --color-cat-personal: #626070;
+  --color-text-main: #201f24;
+  --color-text-muted: #696868;
+  --color-border-light: #f3f3f3;
+} */
+
+/* body {
+  background-color: var(--color-bg-app);
+  color: var(--color-text-main);
+} */

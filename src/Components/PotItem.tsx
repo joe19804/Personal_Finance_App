@@ -1,4 +1,4 @@
-export default function PotItem({ label, amount, color }) {
+export default function PotItem({ label, amount, color }: { label: string, amount: string, color: string; }) {
   return (
     <div className="flex items-center gap-3">
       <div className={`w-1 h-10 rounded-full ${color}`}></div>
