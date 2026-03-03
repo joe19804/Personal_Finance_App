@@ -74,3 +74,6 @@ export default defineConfig([
 
 //字型下載
 https://fonts.google.com/selection
+
+//SVG vite plugin
+npm install vite-plugin-svgr -D
