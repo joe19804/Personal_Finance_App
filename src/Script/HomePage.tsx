@@ -1,5 +1,5 @@
 import { ArrowUpDown, ChevronsLeft, DollarSign, Home, PieChart, ReceiptText } from "lucide-react";
-import { useState, type JSX } from "react";
+import { useState } from "react";
 import NavItem from "../Components/NavItem";
 import BudgetsPage from "./BudgetsPage";
 import OverviewPage from "./OverviewPage";
@@ -9,12 +9,12 @@ import TransactionPage from "./TransactionPage";
 
 export default function HomePage() {
   const [active, setActive] = useState<number>(0);
-  const tabContent: { id: string, label: string, icon: JSX.Element, content: React.ReactNode; }[] = [
-    { id: 'Overview', label: 'Overview', icon: <Home />, content: <OverviewPage /> },
-    { id: 'Transaction', label: 'Transaction', icon: <ArrowUpDown />, content: <TransactionPage /> },
-    { id: 'Budgets', label: 'Budgets', icon: <PieChart />, content: <BudgetsPage /> },
-    { id: 'Pots', label: 'Pots', icon: <DollarSign />, content: <PotsPage /> },
-    { id: 'RecurringBills', label: 'Recurring Bills', icon: <ReceiptText />, content: <RecurringBillsPage /> }];
+  const tabContent: { id: string, label: string, icon: React.ElementType, content: React.ReactNode; }[] = [
+    { id: 'Overview', label: 'Overview', icon: Home, content: <OverviewPage /> },
+    { id: 'Transaction', label: 'Transaction', icon: ArrowUpDown, content: <TransactionPage /> },
+    { id: 'Budgets', label: 'Budgets', icon: PieChart, content: <BudgetsPage /> },
+    { id: 'Pots', label: 'Pots', icon: DollarSign, content: <PotsPage /> },
+    { id: 'RecurringBills', label: 'Recurring Bills', icon: ReceiptText, content: <RecurringBillsPage /> }];
 
   function onClickActive(v: number) {
     setActive(v);

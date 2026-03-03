@@ -1,3 +1,4 @@
+
 interface NavItemProps {
   icon: React.ElementType;
   label: string;
@@ -13,6 +14,7 @@ export default function NavItem({ icon: Icon, label, active, onClick }: NavItemP
       }`}>
       <Icon size={20} className={`transition-colors ${active ? 'text-[#277C78]' : ''
         }`} />
+      <span className="material-symbols-outlined" />
       <span className="text-base">{label}</span>
     </div>
   );
