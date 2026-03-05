@@ -1,0 +1,30 @@
+進度
+
+切版先以大面積區域作為切割方向
+左邊導引欄
+overview 總覽
+transaction 交易
+Budgets 預算
+Pots 子帳戶 一筆預留的資金或款項
+recurring bills 帳單
+
+
+
+右邊內容
+[overview 概要]上面
+餘額、收入、支出
+[Pots]左上
+[Transaction]左下
+[Budgets]右上
+[Recurring bills]右下
+
+
+Hover State
+Active State
+
+
+安裝 vite-plugin-svgr
+
+
+
+
