@@ -4,7 +4,7 @@ import BudgetsIcon from "../assets/images/icon-nav-budgets.svg?react";
 import OverviewIcon from "../assets/images/icon-nav-overview.svg?react";
 import PotsIcon from "../assets/images/icon-nav-pots.svg?react";
 import RecurringBillsIcon from "../assets/images/icon-nav-recurring-bills.svg?react";
-import TransactionIcon from "../assets/images/icon-nav-transaction.svg?react";
+import TransactionIcon from "../assets/images/icon-nav-transactions.svg?react";
 import NavItem from "../Components/NavItem";
 import BudgetsPage from "./BudgetsPage";
 import OverviewPage from "./OverviewPage";
