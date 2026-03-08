@@ -1,5 +1,5 @@
-import { ChevronsLeft } from "lucide-react";
 import { useState } from "react";
+import MinimizeMenuIcon from "../assets/images/icon-minimize-menu.svg?react";
 import BudgetsIcon from "../assets/images/icon-nav-budgets.svg?react";
 import OverviewIcon from "../assets/images/icon-nav-overview.svg?react";
 import PotsIcon from "../assets/images/icon-nav-pots.svg?react";
@@ -42,7 +42,9 @@ export default function HomePage() {
           </nav>
         </div>
         <div className="px-8 flex items-center gap-3 text-gray-400 hover:text-white cursor-pointer transition-colors">
-          <ChevronsLeft size={20} />
+          {/* TODO: 按鈕變更動畫 */}
+          <MinimizeMenuIcon title="Minimize Menu" className={`transition-colors ${active ? 'text-[#277C78]' : ''
+            }`} />
           <span className="font-medium">Minimize Menu</span>
         </div>
       </aside>
