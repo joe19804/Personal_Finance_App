@@ -2,21 +2,13 @@
 
 切版先以大面積區域作為切割方向
 左邊導引欄
-overview 總覽
-transaction 交易
-Budgets 預算
-Pots 子帳戶 一筆預留的資金或款項
-recurring bills 帳單
-
-
+V SVG使用component方式引用
+V SVG fill顏色改為 currentColor，方便統一管理顏色
 
 overview 總覽
-[overview 概要]上面
-餘額、收入、支出
-[Pots]左上
-[Transaction]左下
-[Budgets]右上
-[Recurring bills]右下
+V 連結到相關頁面 onNavigate
+icon換成SVG
+
 
 transaction 交易
 頁籤邏輯處理
@@ -30,18 +22,28 @@ Pots 子帳戶 一筆預留的資金或款項
 recurring bills 帳單
 篩選+搜尋項目金額加總
 
-
-
-
 網頁互動
 Hover State
 Active State
+
+資料處理
+overview 總覽
+transaction 交易
+Budgets 預算
+Pots 子帳戶 一筆預留的資金或款項
+recurring bills 帳單
 
 Tailwind 策略：多利用 sm:、md:、lg: 前綴，並定義一套專屬於行動端的 touch-* 類別來優化觸控體驗。
 
 狀態管理：由於資料要在多端同步，建議使用 TanStack Query (React Query) 處理資料抓取與快取，並搭配 Zustand 管理輕量化的 UI 狀態。
 
 偵測平台：在程式碼中建立 isNative 的判斷邏輯，以便針對網頁版或手機版提供不同的互動邏輯（例如網頁版顯示右鍵選單，手機版改為長按）。
+
+
+Figma
+prototype 看動畫
+design system 設計稿整體風格
+designs 設計稿
 
 
 

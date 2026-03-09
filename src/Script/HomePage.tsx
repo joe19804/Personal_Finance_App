@@ -6,6 +6,7 @@ import PotsIcon from "../assets/images/icon-nav-pots.svg?react";
 import RecurringBillsIcon from "../assets/images/icon-nav-recurring-bills.svg?react";
 import TransactionIcon from "../assets/images/icon-nav-transactions.svg?react";
 import NavItem from "../Components/NavItem";
+import { PageType } from "../type/Index";
 import BudgetsPage from "./BudgetsPage";
 import OverviewPage from "./OverviewPage";
 import PotsPage from "./PotsPage";
@@ -14,13 +15,13 @@ import TransactionPage from "./TransactionPage";
 
 
 export default function HomePage() {
-  const [active, setActive] = useState<number>(0);
-  const tabContent: { id: string, label: string, icon: React.FC<React.SVGProps<SVGSVGElement>>, content: React.ReactNode; }[] = [
-    { id: 'Overview', label: 'Overview', icon: OverviewIcon, content: <OverviewPage /> },
-    { id: 'Transaction', label: 'Transaction', icon: TransactionIcon, content: <TransactionPage /> },
-    { id: 'Budgets', label: 'Budgets', icon: BudgetsIcon, content: <BudgetsPage /> },
-    { id: 'Pots', label: 'Pots', icon: PotsIcon, content: <PotsPage /> },
-    { id: 'RecurringBills', label: 'Recurring Bills', icon: RecurringBillsIcon, content: <RecurringBillsPage /> }];
+  const [active, setActive] = useState<number>(PageType.Overview);
+  const tabContent: { label: string, icon: React.FC<React.SVGProps<SVGSVGElement>>, content: React.ReactNode; }[] = [
+    { label: 'Overview', icon: OverviewIcon, content: <OverviewPage onNavigate={setActive} /> },
+    { label: 'Transaction', icon: TransactionIcon, content: <TransactionPage /> },
+    { label: 'Budgets', icon: BudgetsIcon, content: <BudgetsPage /> },
+    { label: 'Pots', icon: PotsIcon, content: <PotsPage /> },
+    { label: 'Recurring Bills', icon: RecurringBillsIcon, content: <RecurringBillsPage /> }];
 
   function onClickActive(v: number) {
     setActive(v);
@@ -37,7 +38,7 @@ export default function HomePage() {
           </div>
           <nav className="flex flex-col gap-2 mt-4">
             {tabContent.map((tab, idx) => (
-              <NavItem key={tab.id} icon={tab.icon} label={tab.label} active={idx === active} onClick={() => onClickActive(idx)} />
+              <NavItem key={PageType[idx]} icon={tab.icon} label={tab.label} active={idx === active} onClick={() => onClickActive(idx)} />
             ))}
           </nav>
         </div>

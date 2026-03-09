@@ -3,7 +3,8 @@ import BillItem from "../Components/BillItem";
 import BudgetItem from "../Components/BudgetItem";
 import PotItem from "../Components/PotItem";
 import TransactionItem from "../Components/TransactionItem";
-export default function OverviewPage() {
+import { PageType } from "../type/Index";
+export default function OverviewPage({ onNavigate }: OverviewPageProps) {
 
   return (
     <>
@@ -34,7 +35,7 @@ export default function OverviewPage() {
           <section className="bg-white p-6 rounded-xl shadow-sm">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-bold">Pots</h3>
-              <button className="text-sm text-gray-500 flex items-center hover:text-gray-800">
+              <button className="text-sm text-gray-500 flex items-center hover:text-gray-800" onClick={() => onNavigate(PageType.Pots)}>
                 See Details <ChevronRight size={16} className="ml-1" />
               </button>
             </div>
@@ -59,7 +60,7 @@ export default function OverviewPage() {
           <section className="bg-white p-6 rounded-xl shadow-sm">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-bold">Transactions</h3>
-              <button className="text-sm text-gray-500 flex items-center hover:text-gray-800">
+              <button className="text-sm text-gray-500 flex items-center hover:text-gray-800" onClick={() => onNavigate(PageType.Transaction)}>
                 View All <ChevronRight size={16} className="ml-1" />
               </button>
             </div>
@@ -80,12 +81,11 @@ export default function OverviewPage() {
 
         {/* Right Column (Budgets & Bills) */}
         <div className="lg:col-span-5 space-y-6">
-
           {/* Budgets Section */}
           <section className="bg-white p-6 rounded-xl shadow-sm">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-bold">Budgets</h3>
-              <button className="text-sm text-gray-500 flex items-center hover:text-gray-800">
+              <button className="text-sm text-gray-500 flex items-center hover:text-gray-800" onClick={() => onNavigate(PageType.Budgets)}>
                 See Details <ChevronRight size={16} className="ml-1" />
               </button>
             </div>
@@ -112,7 +112,7 @@ export default function OverviewPage() {
           <section className="bg-white p-6 rounded-xl shadow-sm">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-bold">Recurring Bills</h3>
-              <button className="text-sm text-gray-500 flex items-center hover:text-gray-800">
+              <button className="text-sm text-gray-500 flex items-center hover:text-gray-800" onClick={() => onNavigate(PageType.RecurringBills)}>
                 See Details <ChevronRight size={16} className="ml-1" />
               </button>
             </div>
@@ -127,4 +127,8 @@ export default function OverviewPage() {
       </div>
     </>
   );
+}
+
+interface OverviewPageProps {
+  onNavigate: (index: number) => void;
 }
