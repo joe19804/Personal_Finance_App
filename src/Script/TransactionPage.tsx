@@ -5,7 +5,6 @@ export default function TransactionPage() {
       <h1 className="text-3xl font-bold mb-8">Transaction</h1>
       <div className="rounded-xl border border-border-subtle p-6 bg-white shadow-sm">
 
-
         {/* Filter Bar */}
         <div className="flex gap-4 mb-6">
           <input type="text" className="border rounded-lg px-4 py-2 flex-1" placeholder="Search..." />
