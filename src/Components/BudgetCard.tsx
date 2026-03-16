@@ -1,11 +1,11 @@
-import { getColorVar, type Budget } from "../type/Budget";
 
-export default function BudgetCard({ budget }: { budget: Budget; }) {
+// export default function BudgetCard({ budget }: { budget: Budget; }) {
+export default function BudgetCard() {
 
-  const { category, maximum, spent, colorType, latestTransactions } = budget;
-  const progressPercentage = Math.min((spent / maximum) * 100, 100);
-  const remaining = maximum - spent;
-  const color = getColorVar(colorType);
+  // const { category, maximum, spent, colorType, latestTransactions } = budget;
+  // const progressPercentage = Math.min((spent / maximum) * 100, 100);
+  // const remaining = maximum - spent;
+  // const color = getColorVar(colorType);
   return (
     <></>
     // <div className="bg-white rounded-xl p-6 shadow-sm mb-6">
