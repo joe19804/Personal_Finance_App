@@ -8,6 +8,7 @@ export default defineConfig({
     tailwindcss(),
     svgr(),
   ],
+  base: '/Personal_Finance_App/',
   resolve: {
     alias: {
       '@': '/src',          // 確認你的 @ 指向 src
