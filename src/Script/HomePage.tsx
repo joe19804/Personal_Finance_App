@@ -1,11 +1,13 @@
 import { useState } from "react";
 import MinimizeMenuIcon from "../assets/images/icon-minimize-menu.svg?react";
+import BudgetsIcon from "../assets/images/icon-nav-budgets.svg?react";
 import OverviewIcon from "../assets/images/icon-nav-overview.svg?react";
 import PotsIcon from "../assets/images/icon-nav-pots.svg?react";
 import RecurringBillsIcon from "../assets/images/icon-nav-recurring-bills.svg?react";
 import TransactionIcon from "../assets/images/icon-nav-transactions.svg?react";
 import NavItem from "../Components/NavItem";
 import { PageType } from "../type/Index";
+import BudgetsPage from "./BudgetsPage";
 import OverviewPage from "./OverviewPage";
 import PotsPage from "./PotsPage";
 import RecurringBillsPage from "./RecurringBillsPage";
@@ -17,7 +19,7 @@ export default function HomePage() {
   const tabContent: { label: string, icon: React.FC<React.SVGProps<SVGSVGElement>>, content: React.ReactNode; }[] = [
     { label: 'Overview', icon: OverviewIcon, content: <OverviewPage onNavigate={setActive} /> },
     { label: 'Transaction', icon: TransactionIcon, content: <TransactionPage /> },
-    // { label: 'Budgets', icon: BudgetsIcon, content: <BudgetsPage /> },
+    { label: 'Budgets', icon: BudgetsIcon, content: <BudgetsPage /> },
     { label: 'Pots', icon: PotsIcon, content: <PotsPage /> },
     { label: 'Recurring Bills', icon: RecurringBillsIcon, content: <RecurringBillsPage /> }];
 

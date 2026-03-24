@@ -7,32 +7,52 @@ V SVG fill顏色改為 currentColor，方便統一管理顏色
 
 overview 總覽
 V 連結到相關頁面 onNavigate
-icon換成SVG
-
+V icon換成SVG
+UI 頁面
+平板大小頁面
+手機大小頁面
+後端資料串接
 
 transaction 交易
-頁籤邏輯處理
+V 頁籤邏輯處理
+V 資料篩選
+V UI 頁面
+平板大小頁面
+手機大小頁面
+後端資料串接
 
 Budgets 預算
-新增新的項目預算
+V 新增新的項目預算
+新預算邏輯
+項目刪除邏輯
+UI 頁面
+平板大小頁面
+手機大小頁面
+後端資料串接
 
 Pots 子帳戶 一筆預留的資金或款項
 新增和提取按鈕邏輯
+平板大小頁面
+手機大小頁面
+後端資料串接
 
 recurring bills 帳單
 篩選+搜尋項目金額加總
+平板大小頁面
+手機大小頁面
+後端資料串接
+
+登入出頁面
+UI 頁面
+平板大小頁面
+手機大小頁面
+後端資料串接
 
 網頁互動
 Hover State
 Active State
 
-資料處理
-overview 總覽
-transaction 交易
-Budgets 預算
-Pots 子帳戶 一筆預留的資金或款項
-recurring bills 帳單
-
+登入頁面
 使用OAuth解決第三方登入問題
 
 Tailwind 策略：多利用 sm:、md:、lg: 前綴，並定義一套專屬於行動端的 touch-* 類別來優化觸控體驗。
